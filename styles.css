@@ -1,0 +1,121 @@
+*, 
+*:before, 
+*:after {
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+/*---------------------------------------------
+------------------BASE STYLES------------------
+---------------------------------------------*/
+
+body {
+    color: darkslategrey;
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    margin: 2px 10px 10px 10px;
+    border-top: solid 1px darkslategrey;
+}
+
+form {
+    max-width: 400px;
+    margin: 0px auto;
+}
+
+fieldset {
+    border: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    background: blue;
+    border: none;
+    height: auto;
+    margin: 10px 0px;
+    outline: 0;
+    padding: 15px;
+    width: 100%;
+    background-color: #d8d8d8;
+    border-radius: 8px;
+    color: black;
+    box-shadow: inset grey;
+    margin-bottom: 40px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin: 10px 0px;
+}
+
+button {
+    padding: 20px 40px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    background-color: #2fa295;
+}
+
+footer {
+   text-align: center;
+   font-style: italic;
+   font-size: .75em;
+   color: grey;
+}
+
+/*-------------------Class Selectors------------------------*/
+
+.head-container {
+    margin: 0px 10px;
+    border-bottom: solid 4px darkslategrey;
+}
+
+.main-header {
+    text-align: center;
+    background-color: #13293D;
+    width: 100%;
+    height: auto;
+    padding: 25px 15px;
+    color: white;
+    
+}
+
+.form-head {
+    text-align: center;
+}
+
+.form-bio {
+    text-align: center;
+    color: lightgrey;
+    padding-bottom: 40px;
+    margin-bottom: 0px;
+    
+}
+
+.contact-info {
+    border-bottom: solid 2px darkslategrey;
+    padding: 0;
+}
+
+.news-subtitles {
+    display: inline-block;
+    padding-top: 20px;
+}
+
+::placeholder {
+    text-align: right;
+    font-style: italic;
+    font-size: .8em;
+}
+
+/*-------------------------------------------------
+------------------MEDIA QUERIES--------------------
+-------------------------------------------------*/

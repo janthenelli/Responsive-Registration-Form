@@ -16,16 +16,16 @@ body {
 
 h1 {
     margin: 0;
+    font-size: 1.5em;
 }
 
 main {
     margin: 2px 10px 10px 10px;
-    border-top: solid 1px darkslategrey;
 }
 
 form {
-    max-width: 400px;
-    margin: 0px auto;
+    margin: 2px auto;
+    border-top: solid 1px darkslategrey;
 }
 
 fieldset {
@@ -56,6 +56,11 @@ input[type="radio"] {
     margin: 10px 0px;
 }
 
+input[id="zipcode"] {
+    display: block;
+    max-width: 50%;
+}
+
 button {
     padding: 20px 40px;
     width: 100%;
@@ -73,9 +78,14 @@ footer {
 
 /*-------------------Class Selectors------------------------*/
 
+.border-container {
+    margin: 0 auto;
+    max-width: 400px;
+    border-top: solid 4px darkslategrey
+}
+
 .head-container {
     margin: 0px 10px;
-    border-bottom: solid 4px darkslategrey;
 }
 
 .main-header {
@@ -85,7 +95,6 @@ footer {
     height: auto;
     padding: 25px 15px;
     color: white;
-    
 }
 
 .form-head {
@@ -97,7 +106,6 @@ footer {
     color: lightgrey;
     padding-bottom: 40px;
     margin-bottom: 0px;
-    
 }
 
 .contact-info {
@@ -110,6 +118,14 @@ footer {
     padding-top: 20px;
 }
 
+/*--------------------Advanced Selectors--------------------*/
+
+input:focus,
+select:focus,
+textarea:focus {
+    border: solid 2px darkblue;
+}
+
 ::placeholder {
     text-align: right;
     font-style: italic;
@@ -119,3 +135,26 @@ footer {
 /*-------------------------------------------------
 ------------------MEDIA QUERIES--------------------
 -------------------------------------------------*/
+
+@media (min-width: 768px) {
+
+    .border-container {
+        max-width: 600px;
+    }
+
+    input[id="zipcode"] {
+        width: 33.33%;
+    }
+
+    .contact-info input,
+    .contact-info select {
+        max-width: 75%;
+        display: inline-block;
+    }
+
+    .contact-info label {
+        width: 20%;
+        float: left;
+        clear: both;
+    }
+}

@@ -126,8 +126,15 @@ textarea:focus {
     border: solid 2px darkblue;
 }
 
-::placeholder {
+input[id="name"]::placeholder,
+input[id="email"]::placeholder {
     text-align: right;
+    font-style: italic;
+    font-size: .8em;
+}
+
+::placeholder {
+    text-align: left;
     font-style: italic;
     font-size: .8em;
 }
@@ -142,25 +149,26 @@ textarea:focus {
         max-width: 600px;
     }
 
-   
+    #zipcode {
+        width: 25%;
+    }
 
    .input-label-line {
        display: flex;
        width: 100%;
-       flex-wrap: wrap;
        flex-direction: row;
-       
+       align-items: center;
     }
 
    .input-label-line label {
        width: 25%;
+       align-self: flex-start;
    }
 
+   .input-label-line input,
+   .input-label-line select {
+       width: 75%;
+       align-self: flex-end;
+   }
 
-
-    .clearfix::after {
-        content: "";
-        clear: both;
-        display: table;
-    }
 }

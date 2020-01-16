@@ -48,7 +48,6 @@ textarea {
     background-color: #d8d8d8;
     border-radius: 8px;
     color: black;
-    box-shadow: inset grey;
     transition: background 1s;
 }
 

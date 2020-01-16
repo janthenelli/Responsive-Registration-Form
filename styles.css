@@ -24,8 +24,9 @@ main {
 }
 
 form {
-    margin: 2px auto;
-    border-top: solid 1px darkslategrey;
+    margin: 10px auto;
+    background: rgba(172, 174, 190, 0.26);
+    border-radius: 8px;
 }
 
 fieldset {
@@ -40,7 +41,7 @@ textarea {
     background: blue;
     border: none;
     height: auto;
-    margin: 10px 0px;
+    margin: 10px 0px 40px 0px;
     outline: 0;
     padding: 15px;
     width: 100%;
@@ -48,7 +49,7 @@ textarea {
     border-radius: 8px;
     color: black;
     box-shadow: inset grey;
-    margin-bottom: 40px;
+    transition: background 1s;
 }
 
 input[type="checkbox"],
@@ -78,14 +79,28 @@ footer {
 
 /*-------------------Class Selectors------------------------*/
 
-.border-container {
+.h2 {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.border-container-out {
     margin: 0 auto;
     max-width: 400px;
     border-top: solid 4px darkslategrey
 }
 
+.border-container-in {
+    margin-top: 3px;
+    border-top: solid 1px darkslategrey;
+}
+
 .head-container {
     margin: 0px 10px;
+}
+
+.main-container {
+    padding: 10px 5px;
 }
 
 .main-header {
@@ -109,8 +124,21 @@ footer {
 }
 
 .contact-info {
-    border-bottom: solid 2px darkslategrey;
     padding: 0;
+}
+
+.info-container {
+    margin-top: 20px;    
+}
+
+.newsletter {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.newsletter-container {
+    padding-top: 40px;
+    border-top: solid 2px darkslategrey;
 }
 
 .news-subtitles {
@@ -124,6 +152,7 @@ input:focus,
 select:focus,
 textarea:focus {
     border: solid 2px darkblue;
+    background: #d8d8d800;
 }
 
 input[id="name"]::placeholder,
@@ -145,7 +174,7 @@ input[id="email"]::placeholder {
 
 @media (min-width: 768px) {
 
-    .border-container {
+    .border-container-out {
         max-width: 600px;
     }
 
@@ -158,17 +187,21 @@ input[id="email"]::placeholder {
        width: 100%;
        flex-direction: row;
        align-items: center;
+       margin: 20px 0px;
     }
 
    .input-label-line label {
        width: 25%;
-       align-self: flex-start;
    }
 
    .input-label-line input,
    .input-label-line select {
        width: 75%;
-       align-self: flex-end;
+       margin: 0;
+   }
+
+   .info-container {
+       margin: 10px 0px 40px 0px;
    }
 
 }
